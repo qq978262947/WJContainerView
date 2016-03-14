@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "WJNavController.h"
+#import "WJTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,8 @@
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
     // 设置窗口的根控制器
-    self.window.rootViewController = [[ViewController alloc] init];
+    WJTableViewController *tableVC = [[WJTableViewController alloc]init];
+    self.window.rootViewController = [[WJNavController alloc] initWithRootViewController:tableVC];
     // 显示窗口
     [self.window makeKeyAndVisible];
     return YES;
