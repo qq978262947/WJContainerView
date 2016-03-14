@@ -103,11 +103,10 @@
     contentView.bounces = NO;
     [self insertSubview:contentView atIndex:0];
     
-    contentView.backgroundColor = [UIColor whiteColor];
+    contentView.backgroundColor = [UIColor clearColor];
     self.contentView = contentView;
     
     
-    contentView.backgroundColor = [UIColor clearColor];
     if (self.views.count > 0) {
         [self configChildViewWithIndex:0];
     }
@@ -197,7 +196,9 @@
         CGFloat contentViewW = self.scrollView.contentSize.width;
         self.scrollView.contentOffset = CGPointMake(contentViewW - WJContainerViewW, 0);
     } else {
-        self.scrollView.contentOffset = CGPointMake((index - 1) * btnW , 0);
+        if (count * btnW > WJContainerViewW) {
+            self.scrollView.contentOffset = CGPointMake((index - 1) * btnW , 0);
+        }
     }
     
     if (index > self.views.count - 1) return;
@@ -248,19 +249,21 @@
 - (void)setTitles:(NSArray *)titles {
     _titles = [titles copy];
     self.containerView.titles = titles;
-    self.contentView.contentSize = CGSizeMake(WJScreenW * self.containerView.titles.count, 0);
+    self.contentView.contentSize = CGSizeMake(WJContainerViewW * self.containerView.titles.count, 0);
 }
 
-
-- (void)setupTitlesWidth:(CGFloat)width {
-
-}
 
 
 - (void)setTitlesScrollWidth:(CGFloat)titlesScrollWidth {
     _titlesScrollWidth = titlesScrollWidth;
     self.scrollView.contentSize = CGSizeMake(titlesScrollWidth, 0);
     [self setNeedsLayout];
+}
+
+- (void)setContentBackgroundColor:(UIColor *)contentBackgroundColor {
+    _contentBackgroundColor = contentBackgroundColor;
+    
+    self.contentView.backgroundColor = contentBackgroundColor;
 }
 
 @end

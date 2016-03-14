@@ -23,9 +23,9 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor redColor];
-    WJScrollTitleView *tv = [WJScrollTitleView scrollTitleViewWithFrame:self.view.bounds];
+    WJScrollTitleView *tv = [WJScrollTitleView scrollTitleView];
     self.tv = tv;
-    tv.backgroundColor = [UIColor purpleColor];
+    tv.backgroundColor = [UIColor greenColor];
     
     UIViewController *vc1 = [[UIViewController alloc]init];
     vc1.view.backgroundColor = [UIColor whiteColor];
@@ -58,13 +58,15 @@
     [self configView];
     
     //设置标题的最大偏移
-    tv.titlesScrollWidth = 1.5 * WJScreenW;
+    tv.titlesScrollWidth = WJScreenW * 1.4;
+    [tv setContentBackgroundColor:[UIColor yellowColor]];
 }
 
-// 约束当前控制器视图的位置
+// 约束WJScrollTitleView控制器视图的位置
 - (void)configView {
     [self.tv mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.bottom.leading.right.equalTo(@0);
+        make.top.leading.equalTo(@0);
+        make.bottom.right.equalTo(@0);
     }];
 }
 

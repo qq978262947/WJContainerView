@@ -25,6 +25,10 @@
  *
  */
 @property (assign, nonatomic)CGFloat titlesScrollWidth;
+/**
+ *  contentView的背景颜色
+ */
+@property (strong, nonatomic)UIColor *contentBackgroundColor;
 
 @property (weak, nonatomic)id <WJScrollTitleViewDelegate> delegate;
 //////////////////////////////////////////////////////////////////////// 设置头部标题
