@@ -13,6 +13,7 @@
 #define WJScreenW [UIScreen mainScreen].bounds.size.width
 #define WJContainerViewW (WJScreenW)
 #define WJStatusAndBarHeight 64
+#define WJTitleH 35
 
 @interface WJScrollTitleView () <WJContainerViewDelegate, UIScrollViewDelegate>
 // 标题
@@ -135,7 +136,7 @@
         make.top.equalTo(@(WJStatusAndBarHeight));
         make.left.equalTo(@0);
         make.width.equalTo(@(WJContainerViewW));
-        make.height.equalTo(@35);
+        make.height.equalTo(@WJTitleH);
     }];
 }
 
@@ -146,7 +147,7 @@
     [self.containerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.equalTo(@0);
         make.width.equalTo(weakSelf.titlesScrollWidth == 0 ? @(1.5 * WJContainerViewW) :@(weakSelf.titlesScrollWidth));
-        make.height.equalTo(@35);
+        make.height.equalTo(@WJTitleH);
     }];
 }
 
@@ -174,7 +175,7 @@
         __weak typeof(self)weakSelf = self;
         [constraintModel.view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.equalTo(weakSelf.contentView);
-            make.top.equalTo(weakSelf.contentView);
+            make.top.equalTo(weakSelf.contentView).offset(WJTitleH);
             make.left.equalTo(weakSelf.contentView).offset(index * weakSelf.contentView.width);
         }];
         constraintModel.configConstraint = YES;
@@ -264,6 +265,42 @@
     _contentBackgroundColor = contentBackgroundColor;
     
     self.contentView.backgroundColor = contentBackgroundColor;
+}
+
+
+- (void)setTitleColor:(UIColor *)titleColor {
+    _titleColor = titleColor;
+    self.containerView.titleColor = titleColor;
+}
+
+- (void)setSelectedTitleColor:(UIColor *)selectedTitleColor {
+    _selectedTitleColor = selectedTitleColor;
+    self.containerView.selectedTitleColor = selectedTitleColor;
+}
+
+- (void)setButtonBackgroundColor:(UIColor *)buttonBackgroundColor {
+    _buttonBackgroundColor = buttonBackgroundColor;
+    self.containerView.buttonBackgroundColor = buttonBackgroundColor;
+}
+
+- (void)setButtonBackgroundImage:(UIColor *)buttonBackgroundImage {
+    _buttonBackgroundImage = buttonBackgroundImage;
+    self.containerView.buttonBackgroundImage = buttonBackgroundImage;
+}
+
+- (void)setIndicatorViewColor:(UIColor *)indicatorViewColor{
+    indicatorViewColor = indicatorViewColor;
+    self.containerView.indicatorViewColor = indicatorViewColor;
+}
+
+- (void)setAnimationTime:(NSTimeInterval)animationTime{
+    _animationTime = animationTime;
+    self.containerView.animationTime = animationTime;
+}
+
+- (void)setIsOpenAnimation:(BOOL)isOpenAnimation {
+    _isOpenAnimation = isOpenAnimation;
+    self.containerView.isOpenAnimation = isOpenAnimation;
 }
 
 @end

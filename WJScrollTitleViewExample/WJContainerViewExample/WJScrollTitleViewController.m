@@ -50,7 +50,7 @@
      [self addChildViewController:vc7];
     
     tv.views = @[vc1.view,vc2.view,vc3.view,vc4.view,vc5.view,vc6.view,vc7.view];
-    tv.titles = @[@"haha1",@"haha2",@"haha3",@"haha4",@"haha5",@"haha6",@"haha7"];
+    tv.titles = @[@"demo1",@"demo2",@"demo3",@"demo4",@"demo5",@"demo6",@"demo7"];
     
     
     [self.view addSubview:tv];
@@ -58,7 +58,7 @@
     [self configView];
     
     //设置标题的最大偏移
-    tv.titlesScrollWidth = WJScreenW * 1.28;
+    tv.titlesScrollWidth = WJScreenW * 1.4;
     [tv setContentBackgroundColor:[UIColor yellowColor]];
 }
 
