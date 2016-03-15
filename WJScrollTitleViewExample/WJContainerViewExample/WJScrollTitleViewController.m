@@ -58,7 +58,7 @@
     [self configView];
     
     //设置标题的最大偏移
-    tv.titlesScrollWidth = WJScreenW * 1.4;
+    tv.titlesScrollWidth = WJScreenW * 1.28;
     [tv setContentBackgroundColor:[UIColor yellowColor]];
 }
 
