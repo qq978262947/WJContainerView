@@ -49,7 +49,7 @@
     vc7.view.backgroundColor = [UIColor blueColor];
      [self addChildViewController:vc7];
     
-    tv.views = @[vc1.view,vc2.view,vc3.view,vc4.view,vc5.view,vc6.view,vc7.view];
+    tv.viewControllers = @[vc1,vc2,vc3,vc4,vc5,vc6,vc7];
     tv.titles = @[@"demo1",@"demo2",@"demo3",@"demo4",@"demo5",@"demo6",@"demo7"];
     
     
