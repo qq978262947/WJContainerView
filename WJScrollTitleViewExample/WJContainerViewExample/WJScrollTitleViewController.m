@@ -59,7 +59,7 @@
     
     //设置标题的最大偏移
     tv.titlesScrollWidth = WJScreenW * 1.4;
-    [tv setContentBackgroundColor:[UIColor yellowColor]];
+    [tv setContentBackgroundColor:[UIColor grayColor]];
 }
 
 // 约束WJScrollTitleView控制器视图的位置

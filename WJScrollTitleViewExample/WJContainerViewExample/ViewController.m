@@ -99,7 +99,7 @@
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {
     // 当前的索引
-    NSInteger index = scrollView.contentOffset.x / scrollView.width;
+//    NSInteger index = scrollView.contentOffset.x / scrollView.width;
     
     
     
