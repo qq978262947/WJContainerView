@@ -28,7 +28,7 @@
 
 
 
-@property (copy, nonatomic) NSArray *titles;
+@property (strong, nonatomic) NSArray *titles;
 /**
  *  初始化方法
  *

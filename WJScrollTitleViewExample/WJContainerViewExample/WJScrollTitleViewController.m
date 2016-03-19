@@ -26,7 +26,7 @@
     self.view.backgroundColor = [UIColor redColor];
     WJScrollTitleView *tv = [WJScrollTitleView scrollTitleView];
     self.tv = tv;
-    tv.titlesBackgroundColor = [UIColor colorWithWhite:0.7 alpha:0.9];
+    tv.titlesBackgroundColor = [UIColor colorWithWhite:1.0 alpha:0.9];
     
     UITableViewController *vc1 = [[UITableViewController alloc]init];
     vc1.view.backgroundColor = [UIColor whiteColor];
@@ -42,28 +42,27 @@
     vc3.view.backgroundColor = [UIColor yellowColor];
     vc3.tableView.delegate = self;
     vc3.tableView.dataSource = self;
-     [self addChildViewController:vc3];
+    [self addChildViewController:vc3];
     UITableViewController *vc4 = [[UITableViewController alloc]init];
     vc4.view.backgroundColor = [UIColor greenColor];
     vc4.tableView.delegate = self;
     vc4.tableView.dataSource = self;
-     [self addChildViewController:vc4];
+    [self addChildViewController:vc4];
     UIViewController *vc5 = [[UIViewController alloc]init];
     vc5.view.backgroundColor = [UIColor redColor];
-     [self addChildViewController:vc5];
+    [self addChildViewController:vc5];
     UIViewController *vc6 = [[UIViewController alloc]init];
     vc6.view.backgroundColor = [UIColor grayColor];
-     [self addChildViewController:vc6];
+    [self addChildViewController:vc6];
     UIViewController *vc7 = [[UIViewController alloc]init];
     vc7.view.backgroundColor = [UIColor blueColor];
-     [self addChildViewController:vc7];
+    [self addChildViewController:vc7];
+    
     
     tv.viewControllers = @[vc1,vc2,vc3,vc4,vc5,vc6,vc7];
-    tv.titles = @[@"demo1",@"demo2",@"demo3",@"demo4",@"demo5",@"demo6",@"demo7"];
+    tv.titles = @[@"demo1",@"demo2",@"", @"demo3",@"demo4",@"demo5",@"demo6",@"demo7"];
     
     [self.view addSubview:tv];
-    
-    self.view.frame = CGRectMake(0, 0, WJScreenW, WJScreenH);
     
     [self configView];
     
