@@ -10,8 +10,9 @@
 #import "WJScrollTitleView.h"
 #import "Masonry.h"
 #define WJScreenW [UIScreen mainScreen].bounds.size.width
+#define WJScreenH [UIScreen mainScreen].bounds.size.height
 
-@interface WJScrollTitleViewController ()
+@interface WJScrollTitleViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) WJScrollTitleView *tv;
 
@@ -27,17 +28,25 @@
     self.tv = tv;
     tv.backgroundColor = [UIColor greenColor];
     
-    UIViewController *vc1 = [[UIViewController alloc]init];
+    UITableViewController *vc1 = [[UITableViewController alloc]init];
     vc1.view.backgroundColor = [UIColor whiteColor];
+    vc1.tableView.delegate = self;
+    vc1.tableView.dataSource = self;
     [self addChildViewController:vc1];
-    UIViewController *vc2 = [[UIViewController alloc]init];
+    UITableViewController *vc2 = [[UITableViewController alloc]init];
     vc2.view.backgroundColor = [UIColor blackColor];
+    vc2.tableView.delegate = self;
+    vc2.tableView.dataSource = self;
     [self addChildViewController:vc2];
-    UIViewController *vc3 = [[UIViewController alloc]init];
+    UITableViewController *vc3 = [[UITableViewController alloc]init];
     vc3.view.backgroundColor = [UIColor yellowColor];
+    vc3.tableView.delegate = self;
+    vc3.tableView.dataSource = self;
      [self addChildViewController:vc3];
-    UIViewController *vc4 = [[UIViewController alloc]init];
+    UITableViewController *vc4 = [[UITableViewController alloc]init];
     vc4.view.backgroundColor = [UIColor greenColor];
+    vc4.tableView.delegate = self;
+    vc4.tableView.dataSource = self;
      [self addChildViewController:vc4];
     UIViewController *vc5 = [[UIViewController alloc]init];
     vc5.view.backgroundColor = [UIColor redColor];
@@ -54,6 +63,8 @@
     
     
     [self.view addSubview:tv];
+    
+    self.view.frame = CGRectMake(0, 0, WJScreenW, WJScreenH);
     
     [self configView];
     
@@ -77,14 +88,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 20;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellId = @"cellID";
+    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
+    cell.textLabel.text = @"111111";
+    return cell;
+}
 
 @end

@@ -7,6 +7,9 @@
 //
 
 #import "WJNavController.h"
+#import "UIImage+reSize.h"
+
+#define WJScreenW [UIScreen mainScreen].bounds.size.width
 
 @interface WJNavController ()
 
@@ -14,9 +17,25 @@
 
 @implementation WJNavController
 
+/**
+ * 当第一次使用这个类的时候会调用一次
+ */
++ (void)initialize
+{
+    // 当导航栏用在WJNavigationController中, appearance设置才会生效
+    //        UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:[self class], nil];
+    UINavigationBar *bar = [UINavigationBar appearance];
+    UIView *redView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WJScreenW, 64)];
+    redView.backgroundColor = [UIColor colorWithRed:0.9885 green:0.0637 blue:0.1471 alpha:0.895878232758621];
+    UIImage *navBgImage = [UIImage captureWithView:redView];
+    [bar setBackgroundImage:navBgImage forBarMetrics:UIBarMetricsDefault];
+    [bar setTitleTextAttributes:@{
+                                  NSFontAttributeName:[UIFont systemFontOfSize:19],NSForegroundColorAttributeName:[UIColor whiteColor]}];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
