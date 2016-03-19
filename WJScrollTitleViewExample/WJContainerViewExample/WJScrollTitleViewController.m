@@ -26,7 +26,7 @@
     self.view.backgroundColor = [UIColor redColor];
     WJScrollTitleView *tv = [WJScrollTitleView scrollTitleView];
     self.tv = tv;
-    tv.buttonBackgroundImage = [UIColor greenColor];
+    tv.titlesBackgroundColor = [UIColor colorWithWhite:0.7 alpha:0.9];
     
     UITableViewController *vc1 = [[UITableViewController alloc]init];
     vc1.view.backgroundColor = [UIColor whiteColor];
