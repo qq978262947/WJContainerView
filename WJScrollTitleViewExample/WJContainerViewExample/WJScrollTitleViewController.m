@@ -26,7 +26,7 @@
     self.view.backgroundColor = [UIColor redColor];
     WJScrollTitleView *tv = [WJScrollTitleView scrollTitleView];
     self.tv = tv;
-    tv.backgroundColor = [UIColor greenColor];
+    tv.buttonBackgroundImage = [UIColor greenColor];
     
     UITableViewController *vc1 = [[UITableViewController alloc]init];
     vc1.view.backgroundColor = [UIColor whiteColor];
@@ -61,7 +61,6 @@
     tv.viewControllers = @[vc1,vc2,vc3,vc4,vc5,vc6,vc7];
     tv.titles = @[@"demo1",@"demo2",@"demo3",@"demo4",@"demo5",@"demo6",@"demo7"];
     
-    
     [self.view addSubview:tv];
     
     self.view.frame = CGRectMake(0, 0, WJScreenW, WJScreenH);
@@ -95,7 +94,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellId = @"cellID";
     UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
-    cell.textLabel.text = @"111111";
+    cell.textLabel.text = [NSString stringWithFormat:@"测试%li", (long)indexPath.row];
     return cell;
 }
 

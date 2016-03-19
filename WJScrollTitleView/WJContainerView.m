@@ -253,10 +253,10 @@ const float buttonHeight = 30;
  *
  *  @param titleColor titleColor
  */
-- (void)setButtonBackgroundImage:(UIColor *)buttonBackgroundImage{
+- (void)setButtonBackgroundImage:(UIImage *)buttonBackgroundImage{
     _buttonBackgroundImage = buttonBackgroundImage;
     for (UIButton *btn in self.btnsArray) {
-        [btn setBackgroundColor:buttonBackgroundImage];
+        [btn setBackgroundImage:buttonBackgroundImage forState:UIControlStateNormal];
     }
     
 }

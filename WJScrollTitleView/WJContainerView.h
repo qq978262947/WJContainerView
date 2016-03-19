@@ -54,7 +54,7 @@
 /**
  *  按钮背景图片
  */
-@property (strong, nonatomic)UIColor *buttonBackgroundImage;
+@property (strong, nonatomic)UIImage *buttonBackgroundImage;
 /**
  *  指示器颜色
  */

@@ -44,7 +44,7 @@
     wj_containerView.titles = @[@"图片",@"视频",@"声音",@"图片图片",@"视频",@"声音02"];
     [self.view addSubview:wj_containerView];
     [self configwj_containerView];
-    [wj_containerView setBackgroundColor:[UIColor whiteColor]];
+    [wj_containerView setBackgroundColor:[UIColor clearColor]];
     // 可以设置按钮背景色颜色
     wj_containerView.buttonBackgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.5];
     // 可以设置指示器颜色
