@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DAE966671C9D02020028124B /* WJScrollTitleView+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE966661C9D02020028124B /* WJScrollTitleView+AOP.m */; };
-		DAE9666A1C9D1A1F0028124B /* NSObject+WJAOP.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE966691C9D1A1F0028124B /* NSObject+WJAOP.m */; };
+		DA001BE61CA2676600CDACFD /* NSObject+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = DA001BE11CA2676600CDACFD /* NSObject+AOP.m */; };
+		DA001BE81CA2676600CDACFD /* WJScrollTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA001BE51CA2676600CDACFD /* WJScrollTitleView.m */; };
+		DA001BED1CA267A100CDACFD /* UIView+WJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA001BEA1CA267A100CDACFD /* UIView+WJExtension.m */; };
+		DA001BEE1CA267A100CDACFD /* WJConstraintModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA001BEC1CA267A100CDACFD /* WJConstraintModel.m */; };
+		DA001BF11CA267B500CDACFD /* WJContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA001BF01CA267B500CDACFD /* WJContainerView.m */; };
+		DA001BF41CA2680000CDACFD /* WJScrollTitleView+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = DA001BF21CA2680000CDACFD /* WJScrollTitleView+AOP.m */; };
 		DAE9666D1C9D1AA80028124B /* WJScrollTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9666C1C9D1AA80028124B /* WJScrollTitleViewController.m */; };
 		DAE966701C9D1F930028124B /* UIImage+reSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9666F1C9D1F930028124B /* UIImage+reSize.m */; };
-		DAF0D35D1C9D8F7500091AE5 /* WJScrollTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF0D35C1C9D8F7500091AE5 /* WJScrollTitleView.m */; };
 		DAF667741C7F342C005E51EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF667731C7F342C005E51EA /* main.m */; };
 		DAF667771C7F342C005E51EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF667761C7F342C005E51EA /* AppDelegate.m */; };
 		DAF6677A1C7F342C005E51EA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF667791C7F342C005E51EA /* ViewController.m */; };
@@ -32,9 +35,6 @@
 		DAF667D01C7F382B005E51EA /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF667C41C7F382B005E51EA /* ViewController+MASAdditions.m */; };
 		DAFEB0A01C96BB95007105E6 /* WJNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFEB09F1C96BB95007105E6 /* WJNavController.m */; };
 		DAFEB0A31C96BBB6007105E6 /* WJTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFEB0A21C96BBB6007105E6 /* WJTableViewController.m */; };
-		DAFEB0A81C96BE60007105E6 /* WJConstraintModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFEB0A51C96BE60007105E6 /* WJConstraintModel.m */; };
-		DAFEB0AE1C96BE6F007105E6 /* UIView+WJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFEB0AB1C96BE6F007105E6 /* UIView+WJExtension.m */; };
-		DAFEB0AF1C96BE6F007105E6 /* WJContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFEB0AD1C96BE6F007105E6 /* WJContainerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,16 +55,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DAE966651C9D02020028124B /* WJScrollTitleView+AOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WJScrollTitleView+AOP.h"; path = "../../../fashionDance/fashionDance/fashionDance/classes/Main-主要/publicController/WJ/view/WJScrollTitleView+AOP.h"; sourceTree = "<group>"; };
-		DAE966661C9D02020028124B /* WJScrollTitleView+AOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "WJScrollTitleView+AOP.m"; path = "../../../fashionDance/fashionDance/fashionDance/classes/Main-主要/publicController/WJ/view/WJScrollTitleView+AOP.m"; sourceTree = "<group>"; };
-		DAE966681C9D1A1F0028124B /* NSObject+WJAOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+WJAOP.h"; path = "../../../Desktop/我的资料/课堂/课堂代码UI/03-aop权限控制/03-aop权限控制/NSObject+WJAOP.h"; sourceTree = "<group>"; };
-		DAE966691C9D1A1F0028124B /* NSObject+WJAOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+WJAOP.m"; path = "../../../Desktop/我的资料/课堂/课堂代码UI/03-aop权限控制/03-aop权限控制/NSObject+WJAOP.m"; sourceTree = "<group>"; };
+		DA001BE01CA2676600CDACFD /* NSObject+AOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AOP.h"; sourceTree = "<group>"; };
+		DA001BE11CA2676600CDACFD /* NSObject+AOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AOP.m"; sourceTree = "<group>"; };
+		DA001BE41CA2676600CDACFD /* WJScrollTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJScrollTitleView.h; sourceTree = "<group>"; };
+		DA001BE51CA2676600CDACFD /* WJScrollTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJScrollTitleView.m; sourceTree = "<group>"; };
+		DA001BE91CA267A100CDACFD /* UIView+WJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WJExtension.h"; sourceTree = "<group>"; };
+		DA001BEA1CA267A100CDACFD /* UIView+WJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WJExtension.m"; sourceTree = "<group>"; };
+		DA001BEB1CA267A100CDACFD /* WJConstraintModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJConstraintModel.h; sourceTree = "<group>"; };
+		DA001BEC1CA267A100CDACFD /* WJConstraintModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJConstraintModel.m; sourceTree = "<group>"; };
+		DA001BEF1CA267B500CDACFD /* WJContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJContainerView.h; sourceTree = "<group>"; };
+		DA001BF01CA267B500CDACFD /* WJContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJContainerView.m; sourceTree = "<group>"; };
+		DA001BF21CA2680000CDACFD /* WJScrollTitleView+AOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WJScrollTitleView+AOP.m"; sourceTree = "<group>"; };
+		DA001BF31CA2680000CDACFD /* WJTitles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJTitles.h; sourceTree = "<group>"; };
+		DA001BF51CA2680C00CDACFD /* WJScrollTitleView+AOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WJScrollTitleView+AOP.h"; sourceTree = "<group>"; };
 		DAE9666B1C9D1AA80028124B /* WJScrollTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJScrollTitleViewController.h; sourceTree = "<group>"; };
 		DAE9666C1C9D1AA80028124B /* WJScrollTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJScrollTitleViewController.m; sourceTree = "<group>"; };
 		DAE9666E1C9D1F930028124B /* UIImage+reSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+reSize.h"; sourceTree = "<group>"; };
 		DAE9666F1C9D1F930028124B /* UIImage+reSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+reSize.m"; sourceTree = "<group>"; };
-		DAF0D35B1C9D8F7500091AE5 /* WJScrollTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WJScrollTitleView.h; path = ../../../.Trash/WJScrollTitleView.h; sourceTree = "<group>"; };
-		DAF0D35C1C9D8F7500091AE5 /* WJScrollTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WJScrollTitleView.m; path = ../../../.Trash/WJScrollTitleView.m; sourceTree = "<group>"; };
 		DAF6676F1C7F342C005E51EA /* WJContainerViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WJContainerViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF667731C7F342C005E51EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAF667751C7F342C005E51EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,12 +117,6 @@
 		DAFEB09F1C96BB95007105E6 /* WJNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJNavController.m; sourceTree = "<group>"; };
 		DAFEB0A11C96BBB6007105E6 /* WJTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJTableViewController.h; sourceTree = "<group>"; };
 		DAFEB0A21C96BBB6007105E6 /* WJTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJTableViewController.m; sourceTree = "<group>"; };
-		DAFEB0A41C96BE60007105E6 /* WJConstraintModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WJConstraintModel.h; path = ../WJScrollTitleView/WJConstraintModel.h; sourceTree = "<group>"; };
-		DAFEB0A51C96BE60007105E6 /* WJConstraintModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WJConstraintModel.m; path = ../WJScrollTitleView/WJConstraintModel.m; sourceTree = "<group>"; };
-		DAFEB0AA1C96BE6F007105E6 /* UIView+WJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+WJExtension.h"; path = "../WJScrollTitleView/UIView+WJExtension.h"; sourceTree = "<group>"; };
-		DAFEB0AB1C96BE6F007105E6 /* UIView+WJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+WJExtension.m"; path = "../WJScrollTitleView/UIView+WJExtension.m"; sourceTree = "<group>"; };
-		DAFEB0AC1C96BE6F007105E6 /* WJContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WJContainerView.h; path = ../WJScrollTitleView/WJContainerView.h; sourceTree = "<group>"; };
-		DAFEB0AD1C96BE6F007105E6 /* WJContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WJContainerView.m; path = ../WJScrollTitleView/WJContainerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,10 +144,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA001BDF1CA2676600CDACFD /* WJTitles */ = {
+			isa = PBXGroup;
+			children = (
+				DA001BE01CA2676600CDACFD /* NSObject+AOP.h */,
+				DA001BE11CA2676600CDACFD /* NSObject+AOP.m */,
+				DA001BE91CA267A100CDACFD /* UIView+WJExtension.h */,
+				DA001BEA1CA267A100CDACFD /* UIView+WJExtension.m */,
+				DA001BEB1CA267A100CDACFD /* WJConstraintModel.h */,
+				DA001BEC1CA267A100CDACFD /* WJConstraintModel.m */,
+				DA001BEF1CA267B500CDACFD /* WJContainerView.h */,
+				DA001BF01CA267B500CDACFD /* WJContainerView.m */,
+				DA001BE41CA2676600CDACFD /* WJScrollTitleView.h */,
+				DA001BE51CA2676600CDACFD /* WJScrollTitleView.m */,
+				DA001BF51CA2680C00CDACFD /* WJScrollTitleView+AOP.h */,
+				DA001BF21CA2680000CDACFD /* WJScrollTitleView+AOP.m */,
+				DA001BF31CA2680000CDACFD /* WJTitles.h */,
+			);
+			path = WJTitles;
+			sourceTree = "<group>";
+		};
 		DAF667661C7F342C005E51EA = {
 			isa = PBXGroup;
 			children = (
-				DAF667A51C7F3663005E51EA /* WJContainerView */,
 				DAF667711C7F342C005E51EA /* WJContainerViewExample */,
 				DAF6678B1C7F342C005E51EA /* WJContainerViewExampleTests */,
 				DAF667961C7F342C005E51EA /* WJContainerViewExampleUITests */,
@@ -167,6 +187,7 @@
 		DAF667711C7F342C005E51EA /* WJContainerViewExample */ = {
 			isa = PBXGroup;
 			children = (
+				DA001BDF1CA2676600CDACFD /* WJTitles */,
 				DAF667AB1C7F382B005E51EA /* Masonry */,
 				DAF667751C7F342C005E51EA /* AppDelegate.h */,
 				DAF667761C7F342C005E51EA /* AppDelegate.m */,
@@ -213,26 +234,6 @@
 				DAF667991C7F342C005E51EA /* Info.plist */,
 			);
 			path = WJContainerViewExampleUITests;
-			sourceTree = "<group>";
-		};
-		DAF667A51C7F3663005E51EA /* WJContainerView */ = {
-			isa = PBXGroup;
-			children = (
-				DAFEB0AA1C96BE6F007105E6 /* UIView+WJExtension.h */,
-				DAFEB0AB1C96BE6F007105E6 /* UIView+WJExtension.m */,
-				DAE966681C9D1A1F0028124B /* NSObject+WJAOP.h */,
-				DAE966691C9D1A1F0028124B /* NSObject+WJAOP.m */,
-				DAFEB0AC1C96BE6F007105E6 /* WJContainerView.h */,
-				DAFEB0AD1C96BE6F007105E6 /* WJContainerView.m */,
-				DAFEB0A41C96BE60007105E6 /* WJConstraintModel.h */,
-				DAFEB0A51C96BE60007105E6 /* WJConstraintModel.m */,
-				DAF0D35B1C9D8F7500091AE5 /* WJScrollTitleView.h */,
-				DAF0D35C1C9D8F7500091AE5 /* WJScrollTitleView.m */,
-				DAE966651C9D02020028124B /* WJScrollTitleView+AOP.h */,
-				DAE966661C9D02020028124B /* WJScrollTitleView+AOP.m */,
-			);
-			name = WJContainerView;
-			path = ../WJContainerView;
 			sourceTree = "<group>";
 		};
 		DAF667AB1C7F382B005E51EA /* Masonry */ = {
@@ -401,29 +402,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAFEB0AE1C96BE6F007105E6 /* UIView+WJExtension.m in Sources */,
 				DAE966701C9D1F930028124B /* UIImage+reSize.m in Sources */,
-				DAE966671C9D02020028124B /* WJScrollTitleView+AOP.m in Sources */,
 				DAF667C91C7F382B005E51EA /* MASConstraintMaker.m in Sources */,
 				DAF6677A1C7F342C005E51EA /* ViewController.m in Sources */,
+				DA001BED1CA267A100CDACFD /* UIView+WJExtension.m in Sources */,
+				DA001BE61CA2676600CDACFD /* NSObject+AOP.m in Sources */,
 				DAF667771C7F342C005E51EA /* AppDelegate.m in Sources */,
 				DAFEB0A31C96BBB6007105E6 /* WJTableViewController.m in Sources */,
 				DAF667C81C7F382B005E51EA /* MASConstraint.m in Sources */,
-				DAFEB0A81C96BE60007105E6 /* WJConstraintModel.m in Sources */,
 				DAF667D01C7F382B005E51EA /* ViewController+MASAdditions.m in Sources */,
+				DA001BF11CA267B500CDACFD /* WJContainerView.m in Sources */,
 				DAE9666D1C9D1AA80028124B /* WJScrollTitleViewController.m in Sources */,
-				DAF0D35D1C9D8F7500091AE5 /* WJScrollTitleView.m in Sources */,
+				DA001BEE1CA267A100CDACFD /* WJConstraintModel.m in Sources */,
 				DAF667CA1C7F382B005E51EA /* MASLayoutConstraint.m in Sources */,
 				DAF667CD1C7F382B005E51EA /* NSArray+MASAdditions.m in Sources */,
 				DAF667CC1C7F382B005E51EA /* MASViewConstraint.m in Sources */,
-				DAE9666A1C9D1A1F0028124B /* NSObject+WJAOP.m in Sources */,
 				DAF667CB1C7F382B005E51EA /* MASViewAttribute.m in Sources */,
+				DA001BF41CA2680000CDACFD /* WJScrollTitleView+AOP.m in Sources */,
 				DAFEB0A01C96BB95007105E6 /* WJNavController.m in Sources */,
 				DAF667CF1C7F382B005E51EA /* View+MASAdditions.m in Sources */,
 				DAF667741C7F342C005E51EA /* main.m in Sources */,
 				DAF667C71C7F382B005E51EA /* MASCompositeConstraint.m in Sources */,
 				DAF667CE1C7F382B005E51EA /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				DAFEB0AF1C96BE6F007105E6 /* WJContainerView.m in Sources */,
+				DA001BE81CA2676600CDACFD /* WJScrollTitleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
