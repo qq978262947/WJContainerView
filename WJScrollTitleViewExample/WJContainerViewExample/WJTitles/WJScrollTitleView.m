@@ -195,16 +195,16 @@
     // 当前的索引
     NSInteger index = scrollView.contentOffset.x / scrollView.width;
     NSInteger count = self.containerView.titles.count;
-    CGFloat scrolleViewW = self.scrollView.width;
+    CGFloat scrolleViewW = self.scrollView.contentSize.width;
     CGFloat btnW =  scrolleViewW / count;
-    if ((index + 1) * btnW < scrolleViewW / 2 ) {
+    if (index * btnW < WJContainerViewW / 2 ) {
         self.scrollView.contentOffset = CGPointMake(0 , 0);
-    } else if ((count - index) * btnW < scrolleViewW / 2) {
+    } else if ((count - index) * btnW < WJContainerViewW ) {
         CGFloat contentViewW = self.scrollView.contentSize.width;
         self.scrollView.contentOffset = CGPointMake(contentViewW - WJContainerViewW, 0);
     } else {
         if (count * btnW > WJContainerViewW) {
-            self.scrollView.contentOffset = CGPointMake((index - 1) * btnW , 0);
+            self.scrollView.contentOffset = CGPointMake(index * btnW - WJContainerViewW / 2 + btnW /2 , 0);
         }
     }
     

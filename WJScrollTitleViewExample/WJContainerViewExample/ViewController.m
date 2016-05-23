@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "WJContainerView.h"
+#import "WJTitles.h"
 #import "UIView+WJExtension.h"
 
 #define WJScreenW [UIScreen mainScreen].bounds.size.width

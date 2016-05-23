@@ -336,7 +336,7 @@
 				TargetAttributes = {
 					DAF6676E1C7F342C005E51EA = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 2VHMZAJUND;
+						DevelopmentTeam = W272WDFC9W;
 					};
 					DAF667871C7F342C005E51EA = {
 						CreatedOnToolsVersion = 7.2;
@@ -565,6 +565,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WJContainerViewExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -577,6 +578,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WJContainerViewExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -57,17 +57,35 @@
     UIViewController *vc7 = [[UIViewController alloc]init];
     vc7.view.backgroundColor = [UIColor blueColor];
     [self addChildViewController:vc7];
+    UIViewController *vc8 = [[UIViewController alloc]init];
+    vc8.view.backgroundColor = [UIColor redColor];
+    [self addChildViewController:vc8];
+    UIViewController *vc9 = [[UIViewController alloc]init];
+    vc9.view.backgroundColor = [UIColor grayColor];
+    [self addChildViewController:vc9];
+    UIViewController *vc10 = [[UIViewController alloc]init];
+    vc10.view.backgroundColor = [UIColor blueColor];
+    [self addChildViewController:vc10];
+    UIViewController *vc11 = [[UIViewController alloc]init];
+    vc11.view.backgroundColor = [UIColor redColor];
+    [self addChildViewController:vc11];
+    UIViewController *vc12 = [[UIViewController alloc]init];
+    vc12.view.backgroundColor = [UIColor grayColor];
+    [self addChildViewController:vc12];
+    UIViewController *vc13 = [[UIViewController alloc]init];
+    vc13.view.backgroundColor = [UIColor blueColor];
+    [self addChildViewController:vc13];
     
     
-    tv.viewControllers = @[vc1,vc2,vc3,vc4,vc5,vc6,vc7];
-    tv.titles = @[@"demo1",@"demo2",@"", @"demo3",@"demo4",@"demo5",@"demo6",@"demo7"];
+    tv.viewControllers = @[vc1,vc2,vc3,vc4,vc5,vc6,vc7,vc8,vc9,vc10,vc11,vc12,vc13];
+    tv.titles = @[@"demo1",@"demo2",@"", @"demo3",@"demo4",@"demo5",@"demo6",@"demo7",@"demo8",@"demo9",@"demo10",@"demo11",@"demo12",@"demo13"];
     
     [self.view addSubview:tv];
     
     [self configView];
     
     //设置标题的最大偏移
-    tv.titlesScrollWidth = WJScreenW * 1.4;
+    tv.titlesScrollWidth = WJScreenW * 2.4;
     [tv setContentBackgroundColor:[UIColor grayColor]];
 }
 
