@@ -68,6 +68,11 @@
  */
 @property (assign, nonatomic)BOOL isOpenAnimation;
 /**
+ *  判断指示器位置的变量
+ */
+@property (assign, nonatomic, readonly)NSInteger index;
+
+/**
  *  根据传进来点击的按钮index重置按钮和指示器状态
  *
  *  @param selectedIndex NSInteger

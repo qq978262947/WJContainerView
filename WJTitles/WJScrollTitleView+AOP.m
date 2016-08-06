@@ -13,13 +13,12 @@
 @implementation WJScrollTitleView (AOP)
 
 
-+ (void)load
-{
-    
++ (void)load {
     [WJScrollTitleView aop_changeMethod:@selector(setViewControllers:) newMethod:@selector(aop_setViewControllers:)];
+    [WJScrollTitleView aop_changeMethod:@selector(setTitles:) newMethod:@selector(aop_setTitles:)];
 }
 
-- (void)aop_setViewControllers:(NSMutableArray *)viewControllers {
+- (void)aop_setViewControllers:(NSArray *)viewControllers {
     
     NSMutableArray *newViewControllers = [NSMutableArray array];
     for (UIViewController *vc in viewControllers) {
@@ -49,6 +48,16 @@
     [self aop_setViewControllers:newViewControllers];
 }
 
+- (void)aop_setTitles:(NSArray *)titles {
+    
+    NSMutableArray *newTitles = [NSMutableArray array];
+    for (NSString *title in titles) {
+        if (![title isEqualToString:@""]) {
+            [newTitles addObject:title];
+        }
+    }
+    [self aop_setTitles:newTitles];
+}
 
 
 @end

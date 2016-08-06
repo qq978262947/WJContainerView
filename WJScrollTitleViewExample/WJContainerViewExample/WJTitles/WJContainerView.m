@@ -19,7 +19,7 @@ const float buttonHeight = 30;
 // 存放按钮的数组
 @property (strong, nonatomic)NSMutableArray *btnsArray;
 // 判断指示器位置的变量
-@property (assign, nonatomic)NSInteger index;
+//@property (assign, nonatomic)NSInteger index;
 // 保存布局约束条件
 //@property (strong, nonatomic)MASConstraint *leftConstraint;
 

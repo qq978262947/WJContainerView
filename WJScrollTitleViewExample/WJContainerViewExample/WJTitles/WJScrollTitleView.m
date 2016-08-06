@@ -134,7 +134,7 @@
 
 // 约束ContainerView的位置
 - (void)configContainerView {
-        __weak typeof(self)weakSelf = self;
+    __weak typeof(self)weakSelf = self;
     [self.containerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.equalTo(@0);
         make.width.equalTo(weakSelf.titlesScrollWidth == 0 ? @(1.5 * WJContainerViewW) :@(weakSelf.titlesScrollWidth));
@@ -199,7 +199,7 @@
     CGFloat btnW =  scrolleViewW / count;
     if (index * btnW < WJContainerViewW / 2 ) {
         self.scrollView.contentOffset = CGPointMake(0 , 0);
-    } else if ((count - index) * btnW < WJContainerViewW ) {
+    } else if ((count - 1 - index) * btnW < WJContainerViewW / 2 ) {
         CGFloat contentViewW = self.scrollView.contentSize.width;
         self.scrollView.contentOffset = CGPointMake(contentViewW - WJContainerViewW, 0);
     } else {
@@ -210,12 +210,24 @@
     
     if (index > self.viewControllers.count - 1) return;
     // 取出子控制器
-//    WJArrangeController *vc = self.childViewControllers[index];
+    //    WJArrangeController *vc = self.childViewControllers[index];
     if (self.viewControllers.count > index){
         [self configChildViewWithIndex:index];
     }
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSInteger index = scrollView.contentOffset.x / scrollView.width;
+    if (self.viewControllers.count > index){
+        NSInteger currentIndex = self.containerView.index;
+        CGFloat offserX = scrollView.contentOffset.x / scrollView.width;
+        if (offserX > currentIndex && currentIndex < self.viewControllers.count) {
+            [self configChildViewWithIndex:currentIndex + 1];
+        } else if (offserX < currentIndex && currentIndex > 0) {
+            [self configChildViewWithIndex:currentIndex - 1];
+        }
+    }
+}
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
