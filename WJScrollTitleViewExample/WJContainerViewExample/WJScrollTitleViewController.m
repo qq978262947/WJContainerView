@@ -6,13 +6,20 @@
 //  Copyright © 2016年 汪俊. All rights reserved.
 //
 
+
 #import "WJScrollTitleViewController.h"
 #import "WJScrollTitleView.h"
+#import "WJSourceTableViewController.h"
+
+// 用到项目中需要导入以下头文件
+#import "WJTitles.h"
 #import "Masonry.h"
+
+
 #define WJScreenW [UIScreen mainScreen].bounds.size.width
 #define WJScreenH [UIScreen mainScreen].bounds.size.height
 
-@interface WJScrollTitleViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface WJScrollTitleViewController ()
 
 @property (weak, nonatomic) WJScrollTitleView *tv;
 
@@ -27,28 +34,20 @@
     WJScrollTitleView *tv = [WJScrollTitleView scrollTitleView];
     self.tv = tv;
     tv.titlesBackgroundColor = [UIColor colorWithWhite:1.0 alpha:0.9];
-    
-    UITableViewController *vc1 = [[UITableViewController alloc]init];
+    // 此段垃圾代码仅为测试
+    WJSourceTableViewController *vc1 = [[WJSourceTableViewController alloc]init];
     vc1.view.backgroundColor = [UIColor whiteColor];
-    vc1.tableView.delegate = self;
-    vc1.tableView.dataSource = self;
     [self addChildViewController:vc1];
-    UITableViewController *vc2 = [[UITableViewController alloc]init];
+    WJSourceTableViewController *vc2 = [[WJSourceTableViewController alloc]init];
     vc2.view.backgroundColor = [UIColor blackColor];
-    vc2.tableView.delegate = self;
-    vc2.tableView.dataSource = self;
     [self addChildViewController:vc2];
-    UITableViewController *vc3 = [[UITableViewController alloc]init];
+    WJSourceTableViewController *vc3 = [[WJSourceTableViewController alloc]init];
     vc3.view.backgroundColor = [UIColor yellowColor];
-    vc3.tableView.delegate = self;
-    vc3.tableView.dataSource = self;
     [self addChildViewController:vc3];
-    UITableViewController *vc4 = [[UITableViewController alloc]init];
+    WJSourceTableViewController *vc4 = [[WJSourceTableViewController alloc]init];
     vc4.view.backgroundColor = [UIColor greenColor];
-    vc4.tableView.delegate = self;
-    vc4.tableView.dataSource = self;
     [self addChildViewController:vc4];
-    UIViewController *vc5 = [[UIViewController alloc]init];
+    WJSourceTableViewController *vc5 = [[WJSourceTableViewController alloc]init];
     vc5.view.backgroundColor = [UIColor redColor];
     [self addChildViewController:vc5];
     UIViewController *vc6 = [[UIViewController alloc]init];
@@ -104,18 +103,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
-}
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellId = @"cellID";
-    UITableViewCell *cell;
-    if (nil == cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"测试%li", (long)indexPath.row];
-    return cell;
-}
 
 @end

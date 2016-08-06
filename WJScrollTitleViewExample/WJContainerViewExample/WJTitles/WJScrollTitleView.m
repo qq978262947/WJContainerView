@@ -39,6 +39,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        [self setupReceiveMemoryWaring];
         // 初始化标题
         [self setupContainerView];
         // 初始化scrollerview
@@ -167,15 +168,15 @@
         if (constraintModel.viewControllerClass == WJControllerClassTableView) {
             UITableView *tableview = (UITableView *)constraintModel.viewController.view;
             CGFloat top = 0;
-            tableview.contentInset = UIEdgeInsetsMake(top, 0, WJStatusAndBarHeight, 0);
+            tableview.contentInset = UIEdgeInsetsMake(top, 0, WJStatusAndBarHeight + WJTitleH, 0);
             tableview.scrollIndicatorInsets = tableview.contentInset;
-            tableview.contentOffset = CGPointMake(0, - WJStatusAndBarHeight);
+//            tableview.contentOffset = CGPointMake(0, - WJStatusAndBarHeight);
         } else if (constraintModel.viewControllerClass == WJControllerClassCollectionView) {
             UICollectionView *collectionView = (UICollectionView *)constraintModel.viewController.view;
             CGFloat top = 0;
-            collectionView.contentInset = UIEdgeInsetsMake(top, 0, WJStatusAndBarHeight, 0);
+            collectionView.contentInset = UIEdgeInsetsMake(top, 0, WJStatusAndBarHeight + WJTitleH, 0);
             collectionView.scrollIndicatorInsets = collectionView.contentInset;
-            collectionView.contentOffset = CGPointMake(0, - WJStatusAndBarHeight);
+//            collectionView.contentOffset = CGPointMake(0, - WJStatusAndBarHeight);
         }
         
         __weak typeof(self)weakSelf = self;
@@ -319,6 +320,42 @@
 - (void)setIsOpenAnimation:(BOOL)isOpenAnimation {
     _isOpenAnimation = isOpenAnimation;
     self.containerView.isOpenAnimation = isOpenAnimation;
+}
+
+//处理内存警告
+- (void)handleMemoryWarning
+{
+    NSInteger currentIndex = self.containerView.index;
+    
+    for (int i = 0; i < self.viewControllers.count; i++) {
+        if (i != currentIndex) {
+            WJConstraintModel *constraintModel = self.viewControllers[i];
+            if (constraintModel.isConfigConstraint) {
+                UIViewController *vc = constraintModel.viewController;
+                constraintModel.configConstraint = NO;
+                UIView *tempView = vc.view;
+                [tempView removeFromSuperview];
+                vc.view = nil;
+            }
+        }
+    }
+    
+}
+/**
+ *  需要接受内存警告通知
+ */
+- (void)setupReceiveMemoryWaring {
+    //接收内存警告通知，调用handleMemoryWarning方法处理
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(handleMemoryWarning) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
+}
+
+/**
+ *  移除通知
+ */
+- (void)dealloc {
+    // 取消下载队列里面的任务
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
 }
 
 @end

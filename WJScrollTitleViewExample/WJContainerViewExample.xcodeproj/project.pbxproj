@@ -13,6 +13,7 @@
 		DA001BEE1CA267A100CDACFD /* WJConstraintModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA001BEC1CA267A100CDACFD /* WJConstraintModel.m */; };
 		DA001BF11CA267B500CDACFD /* WJContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA001BF01CA267B500CDACFD /* WJContainerView.m */; };
 		DA001BF41CA2680000CDACFD /* WJScrollTitleView+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = DA001BF21CA2680000CDACFD /* WJScrollTitleView+AOP.m */; };
+		DA4DD1471D55F5D100FD9998 /* WJSourceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4DD1461D55F5D100FD9998 /* WJSourceTableViewController.m */; };
 		DAE9666D1C9D1AA80028124B /* WJScrollTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9666C1C9D1AA80028124B /* WJScrollTitleViewController.m */; };
 		DAE966701C9D1F930028124B /* UIImage+reSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9666F1C9D1F930028124B /* UIImage+reSize.m */; };
 		DAF667741C7F342C005E51EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF667731C7F342C005E51EA /* main.m */; };
@@ -68,6 +69,8 @@
 		DA001BF21CA2680000CDACFD /* WJScrollTitleView+AOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WJScrollTitleView+AOP.m"; sourceTree = "<group>"; };
 		DA001BF31CA2680000CDACFD /* WJTitles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJTitles.h; sourceTree = "<group>"; };
 		DA001BF51CA2680C00CDACFD /* WJScrollTitleView+AOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WJScrollTitleView+AOP.h"; sourceTree = "<group>"; };
+		DA4DD1451D55F5D100FD9998 /* WJSourceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJSourceTableViewController.h; sourceTree = "<group>"; };
+		DA4DD1461D55F5D100FD9998 /* WJSourceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJSourceTableViewController.m; sourceTree = "<group>"; };
 		DAE9666B1C9D1AA80028124B /* WJScrollTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJScrollTitleViewController.h; sourceTree = "<group>"; };
 		DAE9666C1C9D1AA80028124B /* WJScrollTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJScrollTitleViewController.m; sourceTree = "<group>"; };
 		DAE9666E1C9D1F930028124B /* UIImage+reSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+reSize.h"; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 				DAFEB09F1C96BB95007105E6 /* WJNavController.m */,
 				DAE9666E1C9D1F930028124B /* UIImage+reSize.h */,
 				DAE9666F1C9D1F930028124B /* UIImage+reSize.m */,
+				DA4DD1451D55F5D100FD9998 /* WJSourceTableViewController.h */,
+				DA4DD1461D55F5D100FD9998 /* WJSourceTableViewController.m */,
 				DAFEB0A11C96BBB6007105E6 /* WJTableViewController.h */,
 				DAFEB0A21C96BBB6007105E6 /* WJTableViewController.m */,
 				DAE9666B1C9D1AA80028124B /* WJScrollTitleViewController.h */,
@@ -419,6 +424,7 @@
 				DAF667CC1C7F382B005E51EA /* MASViewConstraint.m in Sources */,
 				DAF667CB1C7F382B005E51EA /* MASViewAttribute.m in Sources */,
 				DA001BF41CA2680000CDACFD /* WJScrollTitleView+AOP.m in Sources */,
+				DA4DD1471D55F5D100FD9998 /* WJSourceTableViewController.m in Sources */,
 				DAFEB0A01C96BB95007105E6 /* WJNavController.m in Sources */,
 				DAF667CF1C7F382B005E51EA /* View+MASAdditions.m in Sources */,
 				DAF667741C7F342C005E51EA /* main.m in Sources */,

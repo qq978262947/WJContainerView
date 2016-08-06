@@ -73,7 +73,7 @@
 /**
  *  指定存放内容的viewControllers数组--注意－此处没有循环引用的问题
  */
-@property (strong, nonatomic)NSArray *viewControllers;
+@property (copy, nonatomic)NSArray *viewControllers;
 
 
 @end
